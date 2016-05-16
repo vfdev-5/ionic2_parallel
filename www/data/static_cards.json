@@ -1,0 +1,58 @@
+{
+  "cards": [
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Peter_der-Grosse_1838.jpg/400px-Peter_der-Grosse_1838.jpg",
+      "title": "Год рождения Петра I",
+      "author": "admin",
+      "date": "30.05.1672",
+      "tags": "Правители,Романовы,",
+      "category": "Правители России",
+      "full_description": "<html><h2>Большое описание карточки</h2>текст текст текст</html>"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Profile_portrait_of_Catherine_II_by_Fedor_Rokotov_%281763%2C_Tretyakov_gallery%29.jpg/600px-Profile_portrait_of_Catherine_II_by_Fedor_Rokotov_%281763%2C_Tretyakov_gallery%29.jpg",
+      "title": "Год рождения Екатерины II",
+      "author": "admin",
+      "date": "21.04.1729",
+      "tags": "Правители,Романовы,",
+      "category": "Правители России",
+      "full_description": "<html><h2>Большое описание карточки</h2>текст текст текст</html>"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Lenin.jpg/560px-Lenin.jpg",
+      "title": "Год рождения В.И.Ленина",
+      "author": "admin",
+      "date": "10.04.1870",
+      "tags": "Правители,СССР,Коммунисты",
+      "category": "Правители России",
+      "full_description": "<html><h2>Большое описание карточки</h2>текст текст текст</html>"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Igor_the_Old.jpg",
+      "title": "Год рождения Князя Игоря",
+      "author": "admin",
+      "date": "00.00.878",
+      "tags": "Правители,Рюриковичи,",
+      "category": "Правители России",
+      "full_description": "<html><h2>Большое описание карточки</h2>текст текст текст</html>"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Boris_Godunov_icon.jpg",
+      "title": "Год рождения Бориса Годунова",
+      "author": "admin",
+      "date": "00.00.1552",
+      "tags": "Правители,",
+      "category": "Правители России",
+      "full_description": "<html><h2>Большое описание карточки</h2>текст текст текст</html>"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Putin_with_flag_of_Russia.jpg",
+      "title": "Год рождения В.В.Путина",
+      "author": "admin",
+      "date": "07.10.1952",
+      "tags": "Правители,",
+      "category": "Правители России",
+      "full_description": "<html><h2>Большое описание карточки</h2>текст текст текст</html>"
+    }
+  ]
+}

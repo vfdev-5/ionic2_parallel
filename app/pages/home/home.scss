@@ -1,0 +1,60 @@
+.home {
+
+  // Disable scroll display
+  // ::-webkit-scrollbar,
+  //     *::-webkit-scrollbar {
+  //       display: none;
+  //     }
+
+}
+
+$selection-color : rgba(0,0,255,0.5);
+$col-size-ratio : 60%;
+
+.is_selected {
+  box-shadow: 0px 3px 3px 3px $selection-color;
+}
+
+[drop-area]  {
+  width : 90%;
+  height: 20%;
+  padding: 20px;
+  border-radius: 5px;
+  background: $selection-color;
+}
+
+// [left-col] {
+//   background-color: lightgray;
+//   // position: absolute;
+//   left: 0;
+//   width: $col-size-ratio;
+// }
+
+scroll-content {
+  overflow-y: auto !important;
+}
+
+.left-col {
+  background-color: lightgray;
+  width: $col-size-ratio;
+
+  // Disable scroll display
+  ::-webkit-scrollbar,
+      *::-webkit-scrollbar {
+        display: none;
+      }
+}
+
+.right-col {
+  background-color: darkgray;
+  position: absolute;
+  top: 0;
+  left: $col-size-ratio + 1%;
+  width: 100% - $col-size-ratio - 1%;
+
+  // Disable scroll display
+  ::-webkit-scrollbar,
+      *::-webkit-scrollbar {
+        display: none;
+      }
+}

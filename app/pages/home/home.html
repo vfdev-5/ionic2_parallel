@@ -1,0 +1,61 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Parallel News
+  </ion-title>
+</ion-navbar>
+
+
+<ion-content>
+  <ion-content class="left-col">
+
+  <!-- <ion-content> -->
+  <!-- <ion-row>
+    <ion-col width-50> -->
+      <ion-list>
+
+        <div *ngFor="#item of left_news">
+          <div drop-area *ngIf="selection.length > 0"></div>
+          <ion-card tappable (click)="onCardClicked(item)">
+
+            <ion-item>
+              <h2>{{ item.title }}</h2>
+              <p>{{ item.publishedDate }}</p>
+            </ion-item>
+            <ion-card-content>
+              {{ item.content }}
+            </ion-card-content>
+            <ion-item no-lines>
+              <a href="{{item.link}}">link</a>
+            </ion-item>
+          </ion-card>
+        </div>
+
+        <div drop-area *ngIf="selection.length > 0"></div>
+      </ion-list>
+      <!-- <ion-scroll scrollY="true">
+      </ion-scroll>
+    </ion-col> -->
+
+  </ion-content>
+  <ion-content class="right-col">
+
+    <!-- <ion-col width-50> -->
+      <ion-list >
+        <ion-card *ngFor="#item of right_news"
+          tappable (click)="onCardClicked(item)"
+          [ngClass]="{is_selected: item.is_selected}">
+          <img src="{{item.image}}">
+          <ion-card-content>
+            {{item.title}}
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
+      <!-- <ion-scroll scrollY="true">
+      </ion-scroll> -->
+
+    <!-- </ion-col>
+  </ion-row> -->
+
+  </ion-content>
+
+</ion-content>

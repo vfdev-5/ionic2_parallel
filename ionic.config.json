@@ -1,0 +1,15 @@
+{
+  "name": "parallel_news",
+  "app_id": "",
+  "v2": true,
+  "proxies": [
+    {
+      "path": "/rss",
+      "proxyUrl": "http://www.lefigaro.fr/rss"
+    },
+    {
+      "path": "/ajax",
+      "proxyUrl": "http://ajax.googleapis.com/ajax"
+    }
+  ]
+}
