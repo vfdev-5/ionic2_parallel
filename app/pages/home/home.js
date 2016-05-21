@@ -20,8 +20,8 @@ export class HomePage {
   constructor(rss_feeder, static_cards) {
     this.rss_feeder = rss_feeder;
     this.static_cards = static_cards;
-    this.left_news = [];
-    this.right_news = [];
+    this.left_col = [];
+    this.right_col = [];
 
     this.selection = [];
 
@@ -29,31 +29,42 @@ export class HomePage {
 
   }
 
-  onCardClicked(card_model) {
-    console.log('Card is clicked : ' + card_model);
-    // for (let p in card_model) {
-    //   console.log("p=" + p + ", card_model[p]="+ card_model[p]);
-    // }
+  onCardClicked(card_model, index) {
+    console.log('Card is clicked : ', card_model, index);
 
     if (card_model.is_selected !== undefined) {
       card_model.is_selected = !card_model.is_selected;
-
       // switch off the previous card
       if (this.selection.length > 0) {
         let prev_card = this.selection.pop();
-        prev_card.is_selected = false;
+        prev_card[0].is_selected = false;
       }
       if (card_model.is_selected) {
-        this.selection.push(card_model);
+        this.selection.push([card_model, index]);
       }
     }
   }
 
+  onDrop(index) {
+    console.log('Drop here: index=', index);
+
+    if (this.selection.length == 0) {
+      console.console.error("Selection is empty");
+      return;
+    }
+
+    let selected_card = this.selection.pop();
+    this.right_col.splice(selected_card[1], 1);
+    this.left_col.splice(index, 0, selected_card[0]);
+  }
+
   onPageLoaded() {
-    this.rss_feeder.load()
+
+    this.static_cards.load()
       .subscribe(
-        (feed) => {
-          this.left_news = feed;
+        (cards) => {
+          // Create a presenter from data:
+          this.left_col = [cards[0], cards[1]];
         }
       );
 
@@ -61,8 +72,8 @@ export class HomePage {
       .subscribe(
         (cards) => {
           // Create a presenter from data:
-          this.right_news = cards;
-          this.right_news.forEach(
+          this.right_col = cards;
+          this.right_col.forEach(
             (item) => {
               item['is_selected'] = false;
             }

@@ -1,6 +1,6 @@
 <ion-navbar *navbar>
   <ion-title>
-    Parallel News
+    Parallel Columns
   </ion-title>
 </ion-navbar>
 
@@ -13,24 +13,30 @@
     <ion-col width-50> -->
       <ion-list>
 
-        <div *ngFor="#item of left_news">
-          <div drop-area *ngIf="selection.length > 0"></div>
-          <ion-card tappable (click)="onCardClicked(item)">
-
-            <ion-item>
-              <h2>{{ item.title }}</h2>
-              <p>{{ item.publishedDate }}</p>
-            </ion-item>
+        <div *ngFor="#item of left_col; #i = index">
+          <ion-card
+            tappable
+            (click)="onDrop(i)"
+            drop-area
+            *ngIf="selection.length > 0">
+            Нажми сюда, чтобы перетащить сюда
+          </ion-card>
+          <ion-card>
+            <img src="{{item.image}}">
             <ion-card-content>
-              {{ item.content }}
+              {{item.title}}
             </ion-card-content>
-            <ion-item no-lines>
-              <a href="{{item.link}}">link</a>
-            </ion-item>
           </ion-card>
         </div>
 
-        <div drop-area *ngIf="selection.length > 0"></div>
+        <ion-card
+          tappable
+          (click)="onDrop(left_col.length)"
+          drop-area
+          *ngIf="selection.length > 0">
+          Нажми сюда, чтобы перетащить сюда
+        </ion-card>
+
       </ion-list>
       <!-- <ion-scroll scrollY="true">
       </ion-scroll>
@@ -41,8 +47,8 @@
 
     <!-- <ion-col width-50> -->
       <ion-list >
-        <ion-card *ngFor="#item of right_news"
-          tappable (click)="onCardClicked(item)"
+        <ion-card *ngFor="#item of right_col; #i = index"
+          tappable (click)="onCardClicked(item, i)"
           [ngClass]="{is_selected: item.is_selected}">
           <img src="{{item.image}}">
           <ion-card-content>

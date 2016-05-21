@@ -16,19 +16,11 @@ $col-size-ratio : 60%;
 }
 
 [drop-area]  {
-  width : 90%;
-  height: 20%;
   padding: 20px;
-  border-radius: 5px;
   background: $selection-color;
+  text-align: center;
+  color: white;
 }
-
-// [left-col] {
-//   background-color: lightgray;
-//   // position: absolute;
-//   left: 0;
-//   width: $col-size-ratio;
-// }
 
 scroll-content {
   overflow-y: auto !important;

@@ -32,8 +32,9 @@
       "platform": "ios",
       "version": "",
       "locator": "ios"
-    }
+    },
+    "android"
   ],
-  "name": "parallel_news",
-  "description": "parallel_news: An Ionic project"
+  "name": "parallel_cols",
+  "description": "parallel_cols: An Ionic project"
 }
